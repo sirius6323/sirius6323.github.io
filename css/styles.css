@@ -1,0 +1,383 @@
+/* Colors Used 
+Headings: #ff4136
+Text:  #5b5e60
+Background: #eee
+Menu: #000008;
+Flexbox Background: #f1f1f1
+*/
+
+:root {
+	--headings-color: #ff4136;
+	--body-text-color: #5b5e60;
+	--site-background-color: #eee;
+	--menu-nav-link-color: #000008;
+	--visited-link-color: #21209c;
+	--active-link-color: #30475e;
+	--grid-flex-color: #f1f1f1;
+	--bottom-border-color: rgba(0, 0, 0, 0.3);
+	--font-space-mono: 'Space Mono';
+	--font-biorhyme: 'BioRhyme';
+	--remove-decoration: none;
+	--standard-font-size: 16px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-space-mono), Courier, monospace;
+	background-color: var(--site-background-color);
+	color: var(--body-text-color);
+	line-height: 24px;
+	font-size: var(--standard-font-size);
+}
+
+h1 {
+	font-family: var(--font-biorhyme), serif;
+	color: var(--headings-color);
+	font-size: 48px;
+	font-weight: 300;
+	text-align: center;
+}
+
+/* Nav menu styling */
+.nav-menu {
+	text-align: center;
+	vertical-align: middle;
+	float: right;
+	padding: 8px;
+	margin: 16px 0;
+}
+
+.nav-menu li {
+	padding: 8px;
+	display: inline;
+	text-decoration: var(--remove-decoration);
+	font-size: var(--standard-font-size);
+}
+
+ul,
+li {
+	list-style-type: var(--remove-decoration);
+}
+
+/* Adds text color to links */
+a {
+	color: var(--menu-nav-link-color);
+	text-decoration: var(--remove-decoration);
+}
+
+/* Header styling*/
+.page-header {
+	display: flex;
+	width: 100%;
+	padding-left: 32px;
+	padding-right: 32px;
+	overflow: hidden;
+	border-bottom-style: solid;
+	border-bottom: 1px;
+}
+
+.page-header__item {
+	flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+	flex-grow: 1;
+	text-align: right;
+}
+
+.navigation-list li {
+	display: inline-block;
+	margin-left: 15px;
+	font-size: var(--standard-font-size);
+}
+
+/* Work styling */
+.projects-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+	padding: 16px 32px;
+}
+
+.projects-item {
+	padding: 10px;
+	background-color: var(--grid-flex-color);
+}
+
+/* Grid fallback */
+@supports (display: grid) {
+	.projects-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 20px;
+		margin: 0;
+	}
+
+	.projects-item {
+		background-color: var(--grid-flex-color);
+		width: auto;
+		min-height: auto;
+		margin: 0;
+	}
+}
+
+/* Pseudo states for links */
+a:visited {
+	color: var(--menu-nav-link-color);
+}
+
+a:hover,
+a:focus,
+.button:hover,
+.button:focus {
+	text-decoration: none;
+}
+
+a:active {
+	color: var(--active-link-color);
+}
+
+/* Button styling */
+.button {
+	background-color: var(--body-text-color);
+	color: var(--site-background-color);
+	cursor: pointer;
+	padding: 14px 40px;
+	margin: 10px 0;
+	text-align: center;
+	display: inline-block;
+	font-size: 18px;
+	font-family: inherit;
+	border: none;
+	text-decoration: none;
+	border-radius: 15px;
+	border-bottom: 2px solid var(--bottom-border-color);
+	transition: 0.5s opacity ease-in-out;
+}
+
+/* Button hover state */
+.button:hover {
+	background-color: var(--headings-color);
+	opacity: 0.8;
+	color: var(--site-background-color);
+}
+
+/* Form Styling */
+#contact-form {
+	box-sizing: border-box;
+}
+
+/* Adds padding to form container */
+.form-container {
+	color: var(--body-text-color);
+	padding: 20px;
+	border: 3px solid;
+	border-radius: 20px;
+	background-color: var(--site-background-color);
+	width: 50%;
+}
+
+/* Overwrites style to hr element */
+hr {
+	border: 1px var(--site-background-color);
+	margin-bottom: 25px;
+}
+
+/* Table styling */
+table {
+	table-layout: fixed;
+	width: 50%;
+	border-collapse: collapse;
+	border: 3px solid var(--body-text-color);
+}
+
+th,
+td {
+	padding: 20px;
+}
+
+thead th {
+	font-family: var(--font-biorhyme), serif;
+}
+
+th {
+	letter-spacing: 2px;
+}
+
+td {
+	letter-spacing: 1px;
+}
+
+tbody,
+td {
+	font-family: var(--font-space-mono), Courier, monospace;
+	text-align: center;
+}
+
+/* Profile styling */
+.profile {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.profile-portrait {
+	float: left;
+	height: auto;
+	margin-right: 40px;
+}
+
+/* About me styling */
+.hobbies {
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+}
+
+/* SVG image styling */
+#space-boy {
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+}
+
+/* Footer styling */
+
+.page-footer {
+	clear: both;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+/* Animation */
+
+@keyframes color-change-inner {
+	0% {
+		fill: #edc655;
+	}
+	100% {
+		fill: #fcffad;
+	}
+}
+
+@keyframes color-change-outer {
+	0% {
+		fill: #db9e36;
+	}
+	100% {
+		fill: #f76414;
+	}
+}
+
+/* Rocket flame animation */
+#inner-flame {
+	animation: color-change-inner 4s infinite alternate linear;
+}
+
+#outer-flame {
+	animation: color-change-outer 2s infinite alternate linear;
+	animation-delay: 1s;
+}
+
+/* Cloud animation */
+#right-cloud {
+	animation: right-cloud-move 10s infinite alternate linear;
+}
+
+#left-cloud {
+	animation: left-cloud-move 10s infinite alternate linear;
+}
+
+#blue-clouds {
+	animation: blue-clouds-vert 5s infinite alternate linear;
+}
+
+#white-clouds {
+	animation: white-clouds-vert 5s infinite alternate linear;
+}
+
+#rocket-ship {
+	animation: rocket-blast-off 2s infinite linear;
+}
+
+/* Animations */
+
+@keyframes right-cloud-move {
+	from {
+		transform: translate(0, 20px);
+	}
+	to {
+		transform: translate(50px, 20px);
+	}
+}
+
+@keyframes left-cloud-move {
+	from {
+		transform: translate(0, 20px);
+	}
+	to {
+		transform: translate(70px, 20px);
+	}
+}
+
+@keyframes blue-clouds-vert {
+	from {
+		transform: translate(0, 20px);
+	}
+	to {
+		transform: translate(0, 60px);
+	}
+}
+
+@keyframes white-clouds-vert {
+	from {
+		transform: translate(0, 90px);
+	}
+	to {
+		transform: translate(0, 60px);
+	}
+}
+
+@keyframes rocket-blast-off {
+	0% {
+		transform: rotate(30deg) translate(0, 50%);
+	}
+	100% {
+		transform: translate(0, -60%);
+	}
+}
+
+/* Media queries */
+
+@media all and (max-width: 500px) {
+	.projects-list {
+		grid-template-columns: 1fr;
+	}
+	.page-header__item {
+		width: 150px;
+	}
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+	.projects-list {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media all and (max-width: 750px) {
+	.projects-list {
+		grid-gap: 10px;
+	}
+
+	.projects-item:last-child {
+		grid-column: auto / auto;
+		grid-row: auto / auto;
+	}
+
+	h1 {
+		font-size: 35px;
+	}
+}
