@@ -221,9 +221,9 @@ a:active {
 	margin: 10px 0;
 	background: transparent;
 	border: 0;
-	border-bottom: 2px solid #00bfff;
+	border-bottom: 2px solid #eee;
 	padding: 10px;
-	color: #00bfff;
+	color: #eee;
 	width: 100%;
 	font-weight: 500;
 }
@@ -233,15 +233,15 @@ a:active {
 }
 
 ::-webkit-input-placeholder {
-	color: #00bfff;
+	color: #eee;
 }
 
 ::-moz-input-placeholder {
-	color: #00bfff;
+	color: #eee;
 }
 
 ::-ms-input-placeholder {
-	color: #00bfff;
+	color: #eee;
 }
 
 ::-website-input-autofill-selected {
